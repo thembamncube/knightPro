@@ -1,0 +1,126 @@
+<ion-content style=" --background:whitesmoe;">
+
+    <div class="formPayment" style="margin-top: 40px;">
+        <ion-card style="background-color:#267A6A;color: yellow;">
+            <ion-card-header>
+                <ion-card-subtitle style="font-weight: bold; text-align: center; color: yellow;">Booking Form
+                </ion-card-subtitle>
+                <ion-icon  name="arrow-undo-circle-outline"></ion-icon>
+            </ion-card-header>
+
+        </ion-card>
+        <ion-card>
+
+
+            <ion-card-content>
+                <ion-grid>
+
+
+
+                    <ion-row style="margin-top: 5px;">
+                        <ion-col size="12">
+                            <ion-item>
+                                <!-- <ion-label>Check-in</ion-label> -->
+                                <ion-label></ion-label>
+
+                                <ion-input [(ngModel)]="check_in" name="check-in" type="date"></ion-input>
+
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+
+
+                    <ion-row style="margin-top: 20px;;">
+                        <ion-col size="12">
+                            <ion-item>
+
+                                <ion-label></ion-label>
+                                <ion-input [(ngModel)]="check_out" name="check-out" type="date"></ion-input>
+
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+
+
+
+                    <ion-row style="margin-top: 10px;;">
+                        <ion-col size="12">
+                            <ion-item>
+                                <!-- <ion-label>Room Type</ion-label> -->
+                                <ion-select placeholder="Room Type" [(ngModel)]="roomtype" name="roomtype">
+                                    <ion-select-option value="l">Luxury Room</ion-select-option>
+                                    <ion-select-option value="f">Family Room</ion-select-option>
+                                </ion-select>
+                                <ion-input></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row style="margin-top: 10px;;">
+                        <ion-col size="12">
+                            <ion-item>
+                                <!-- <ion-label> </ion-label> -->
+
+                                <ion-select placeholder="adults" [(ngModel)]="adults" name="adults">
+                                    <ion-select-option value="1">1</ion-select-option>
+                                    <ion-select-option value="2">2</ion-select-option>
+                                    <ion-select-option value="3">3</ion-select-option>
+                                    <ion-select-option value="4">4</ion-select-option>
+                                    <ion-select-option value="5">5</ion-select-option>
+                                    <ion-select-option value="6">6</ion-select-option>
+                                    <ion-select-option value="7">7</ion-select-option>
+                                    <ion-select-option value="8">8</ion-select-option>
+                                    <ion-select-option value="9">9</ion-select-option>
+                                    <ion-select-option value="10">10</ion-select-option>
+                                    <ion-select-option value="11">11</ion-select-option>
+                                    <ion-select-option value="12">12</ion-select-option>
+                                </ion-select>
+
+                                <ion-input></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+
+
+                    <ion-row style="margin-top: 10px;;">
+                        <ion-col size="12">
+                            <ion-item>
+                                <!-- <ion-label> </ion-label> -->
+                                <ion-select placeholder="Kids" [(ngModel)]="kids" name="kids">
+                                    <ion-select-option value="1">1</ion-select-option>
+                                    <ion-select-option value="2">2</ion-select-option>
+                                    <ion-select-option value="3">3</ion-select-option>
+                                    <ion-select-option value="4">4</ion-select-option>
+                                    <ion-select-option value="5">5</ion-select-option>
+                                    <ion-select-option value="6">6</ion-select-option>
+                                    <ion-select-option value="7">7</ion-select-option>
+                                    <ion-select-option value="8">8</ion-select-option>
+                                    <ion-select-option value="9">9</ion-select-option>
+                                    <ion-select-option value="10">10</ion-select-option>
+                                    <ion-select-option value="11">11</ion-select-option>
+                                    <ion-select-option value="12">12</ion-select-option>
+                                </ion-select>
+
+                                <ion-input></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <!-- {{confirmBooking()}} -->
+                    <div *ngIf="bookingState==1"></div>
+
+                    <ion-row style="margin-top: 3px;">
+                        <ion-col size="12">
+                            <ion-button expand="full" style="--background:#267A6A;color: yellow;" shape="round"
+                                (click)="addbookings()">BOOK NOW</ion-button>
+                        </ion-col>
+                    </ion-row>
+
+
+
+
+
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

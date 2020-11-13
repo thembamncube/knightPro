@@ -1,0 +1,27 @@
+
+  <ion-toolbar style="--background:#267A6A; height: 15%;">
+    <ion-title style="color: whitesmoke;">ViewSingleProfile</ion-title>
+    <span style="color: whitesmoke;" [routerLink]="'/user-home'">back</span>
+  </ion-toolbar>
+
+
+<ion-content style="align-content: center;">
+  <div *ngFor = "let arrayList of profileHotel">
+
+    <ion-card>
+      <img [src]="arrayList.imgUrl" >
+      <ion-card-header>
+        <ion-card-subtitle> {{arrayList.hotelname}}</ion-card-subtitle>
+        <ion-card-title> {{arrayList.Description}}</ion-card-title>
+      </ion-card-header>
+<ion-card-content>
+{{arrayList.location}}
+{{arrayList.price}}
+<p style="color: red;">Price : R{{arrayList.price}}</p> 
+</ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button style="--background:#267A6A" [routerLink]="'/book-now'">book now</ion-button>
+  <!-- <ion-button style="--background:#267A6A;" [routerLink]="'/view-list'">more images</ion-button> -->
+</ion-content>

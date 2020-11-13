@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>upload your images</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span [routerLink]="'/dashboard'">back</span>
+          </ion-col>
+          <ion-col >
+            <span style="float:right" (click)="logOut()"  >logout</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <h1>Upload Images</h1>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input type="file" accept="image/*" id="upload" (change)="fileChangeEvent($event)"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="text-align: center;color: green;">
+      <span>{{this.feedback}}</span>
+     </ion-row>
+    <ion-button shape="round" style="--background:#267A6A;"  style="width: 200px; height: 30px; margin-left: 40px;" (click)=" addImages()" >upload images</ion-button>
+  </ion-grid>
+  </ion-content>
+</ion-content>

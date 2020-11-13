@@ -1,0 +1,22 @@
+.holder{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.display{
+    width: 100%;
+    height: 90%;
+    // border-style: solid;
+}
+
+ion-col{
+    display:flex;
+    align-items: flex-end;
+}
+
+.price{
+    color: red;
+    position: absolute;
+    right: 5px;
+}

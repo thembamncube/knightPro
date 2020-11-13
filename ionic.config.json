@@ -1,0 +1,7 @@
+{
+  "name": "knights",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

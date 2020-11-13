@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap');
+
+ion-content{
+    display: flex;
+    position: relative;
+
+}
+div .toolbar{
+    --background:  black;
+}
+.holder{
+    height: 100%;
+    width: 100%;
+    background-color: #267A6A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   font-family: sans-serif;
+   position: relative;
+}
+.form-row{
+    width: 80%;
+    height: 50%;
+    // border-style: solid;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction:column ;
+}
+.logo{
+    position: absolute;
+    
+}
+

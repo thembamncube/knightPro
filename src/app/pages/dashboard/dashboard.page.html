@@ -1,0 +1,82 @@
+<ion-content>
+  <div class="holder">
+    <div class="top">
+      <ion-card class="topcard" style="width: 90%;">
+        <ion-card-header>
+
+          <ion-card-title style="color: teal;">Dashboard</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content style="font-size: 15px;">
+          You can maanage your content easily on your dashboard, upload, view and manage your bookings.
+
+        </ion-card-content>
+
+      </ion-card>
+
+
+    </div>
+
+  
+    <div class="bottom">
+
+      
+        
+      
+      <ion-row style="margin-left: 20px;">
+        <ion-col size="6">
+          <ion-button [routerLink]="'/view-list'" style="width: 90px; --background:white; color:#267A6A ; height: 100px;">
+            <ion-icon slot="icon-only"  name="person"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  [routerLink]="'/add-hotel'" style="width: 90px; --background:white; color:#267A6A ; height: 100px;">
+            <ion-icon slot="icon-only" name="person-add"></ion-icon>
+    
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  [routerLink]="'/booking-history'" style="width: 90px; --background:white; color:#267A6A ; height: 100px;">
+            <ion-icon slot="icon-only" name="eye"></ion-icon>
+           
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button [routerLink]="'/img-upload'" style="width: 90px; --background:white; color:#267A6A ; height: 100px;">
+            <ion-icon slot="icon-only"   name="cloud-upload"></ion-icon>
+           
+          </ion-button>
+        </ion-col>
+      
+      </ion-row>
+
+     
+      
+    </div>
+
+    <!-- /////////////////////////////////////////////////////// -->
+    <!-- <ion-card class="card" style="--background:#ddc486">
+ <ion-card-content>
+          <ion-button style="width: 70px; --background:white; color:#267A6A ;"> profile</ion-button> 
+           <ion-button style="--background:#267A6A" slot="end">Profile</ion-button>
+<a  [routerLink]="'/view-list'"></a> 
+
+           <ion-card style="width: 85%;">
+            <ion-item>
+
+              <ion-label style="color: #667774;">view bookings</ion-label>
+              <ion-button style="--background:#267A6A" slot="end">View</ion-button>
+            </ion-item>
+
+            <ion-card-content>
+              <button [routerLink]="'/add-hotel'">add your hotel</button>
+              <a [routerLink]="'/img-upload'">upload images</a>
+            </ion-card-content>
+          </ion-card>
+
+
+
+        </ion-card-content>
+      </ion-card>  -->
+
+  </div>
+</ion-content>

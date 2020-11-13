@@ -1,0 +1,31 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>signin-user</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="holder">
+  
+   
+  <div class="signinText" >
+    <h1  style="color:yellow;">Welcome</h1>
+  </div>
+  <div class="name" style="color: white;">Please sign in</div>
+    <div class="form-row">
+      <ion-item style="--background:#267A6A; color: yellow;">
+        <ion-label></ion-label>
+        <ion-input placeholder="email address" #email></ion-input>
+      </ion-item>
+      <ion-item style="--background: #267A6A; color: yellow;">
+        <ion-label ></ion-label>
+        <ion-input placeholder="password" #password></ion-input>
+      </ion-item><br>
+      <ion-button (click)="onSignIn(email.value,password.value)" style="--background:yellow; width: 70%;color: black; height: 30px;" shape="round">Sign in</ion-button>
+    </div>
+    <a class="create" [routerLink]="'/signup'" style="color: white;">Don't have an accout?, create one</a><br>
+    <a class="create" [routerLink]="'/onwnerlogin'"  style="color:rgb(179, 179, 110);">Partner to add your hotel</a>
+  </div>
+  <div class="bottom"></div>
+  </ion-content>
+  

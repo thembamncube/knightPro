@@ -1,0 +1,61 @@
+
+  <ion-toolbar style="--background:#267A6A; height: 15%; text-align: center;margin-top:0px;">
+  
+    <p style="color: yellow;">Welcome to Knights Hotels</p>
+    
+    <div> </div>
+  </ion-toolbar>
+
+
+<ion-content style="--background:whitesmoke">
+  <div class="holder">
+  
+    <ion-card *ngFor = "let arrayList of imgLists" style="width: 90%; margin-top: 0px; margin-left: 10px;">
+      <div [routerLink]="'/view-single-profile/'+arrayList.owneruid">
+        
+      <ion-row>
+        <ion-col size="6">
+          <img   [src]="arrayList.imgUrl">
+        </ion-col>
+        <ion-col style="font-size: 15px;">
+          {{arrayList.hotelname}} <br>
+          {{arrayList.location}} <br>
+        <div class=" price" > R{{arrayList.price}}p/n</div> 
+        </ion-col>
+        
+      </ion-row>
+      </div>
+    </ion-card>
+    <!-- ////////////////////////////////////////// -->
+     <ion-card style="width: 90%; margin-top: auto; margin-left: 10px;">
+      <ion-row>
+        <ion-col size="6">
+          <img style="width: 90%; max-width: 100%;" src="assets/try.jpg" alt="">
+        </ion-col>
+      
+        <ion-col>
+         
+         i am a test at test <br>
+         im also a tset at test
+        </ion-col>
+        
+      </ion-row>
+    </ion-card> 
+    <!-- ///////////////////////////////////////////// -->
+    <ion-card style="width: 90%; margin-top: auto; margin-left: 10px;">
+      <ion-row>
+        <ion-col size="6">
+          <img src="assets/try.jpg" alt="">
+        </ion-col>
+        <ion-col>
+         i am a test at test <br>
+         im also a tset at test
+        </ion-col>
+        
+      </ion-row>
+    </ion-card>
+    
+  </div>
+
+  
+</ion-content>

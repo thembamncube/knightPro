@@ -1,0 +1,59 @@
+<ion-content>
+  <ion-grid  style="background-color:#267A6A;padding:0%;" >
+    <ion-row >
+      <ion-col size="12">
+        <ion-icon name="arrow-back-outline"  [routerLink]="'/dashboard'"  style="color:white;font-size: 2em;float:right;"></ion-icon>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
+ 
+
+  <ion-row *ngFor="let x of list"> 
+    <ion-card style="width:100%;">
+      <ion-grid>
+        <!-- <ion-row>
+          {{x.user_email}}
+        </ion-row> -->
+        <ion-row>
+          <ion-col><b>Check In:</b>  {{x.check_in}}</ion-col>
+          <ion-col><b>Check Out:</b> {{x.check_out}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><b>Adults:</b> {{x.adults}}</ion-col>
+          <ion-col><b>Kids:</b> {{x.kids}}</ion-col>
+          <ion-col><b>Rooms:</b> {{x.roomtype}}</ion-col>
+        </ion-row>
+        <!-- <ion-row>
+          <span *ngIf="x.status==0"><b>Status:</b> Declaned</span>
+          <span *ngIf="x.status==1"><b>Status:</b> Approved</span>
+          <span *ngIf="x.status=='panding'"><b>Status:</b> panding</span>
+        </ion-row> -->
+        <!-- <ion-row>
+          <ion-col>
+            <ion-button >Accept</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button >declaned</ion-button>
+          </ion-col>
+
+          
+            <ion-row>
+            <ion-segment style="position: absolute;bottom: 10px;" >
+              <ion-segment-button (click)="status(x.hotel_id,x.uid,'1')" value="friends">
+                <ion-label  >Accept</ion-label>
+              </ion-segment-button>
+              <ion-segment-button  style="background-color:red;" (click)="status(x.hotel_id,x.uid,'0')" value="enemies">
+                <ion-label>declaned!</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+            </ion-row>
+        </ion-row> -->
+        <!-- <ion-row *ngIf="state==1" >
+          <ion-col style="text-align: center;color:#5a751e;">
+         <div style="background-color:#77ad03 ;color:white;padding:5%;">{{feedback}}</div>   
+          </ion-col>
+        </ion-row> -->
+      </ion-grid>
+   </ion-card>
+  </ion-row>
+</ion-content>
