@@ -1,7 +1,7 @@
 
   <ion-toolbar style="--background:#267A6A; height: 15%;">
-    <ion-title style="color: whitesmoke;">ViewSingleProfile</ion-title>
-    <span style="color: whitesmoke;" [routerLink]="'/user-home'">back</span>
+    <ion-title style="color: yellow;">ViewSingleProfile</ion-title>
+    <ion-icon name="arrow-back-outline"  [routerLink]="'/user-home'"  style="color:yellow;font-size: 2em;float:left; text-align: center;"></ion-icon>
   </ion-toolbar>
 
 
@@ -9,10 +9,11 @@
   <div *ngFor = "let arrayList of profileHotel">
 
     <ion-card>
-      <img [src]="arrayList.imgUrl" >
+      <img style="height: 200px;width: 100%;" [src]="arrayList.imgUrl" >
       <ion-card-header>
-        <ion-card-subtitle> {{arrayList.hotelname}}</ion-card-subtitle>
-        <ion-card-title> {{arrayList.Description}}</ion-card-title>
+        <ion-card-subtitle> <strong> {{arrayList.hotelname}}</strong></ion-card-subtitle>
+        <p>{{arrayList.Description}}</p>
+        <p>{{arrayList.types}}</p>
       </ion-card-header>
 <ion-card-content>
 {{arrayList.location}}
@@ -22,6 +23,11 @@
     </ion-card>
   </div>
 
-  <ion-button style="--background:#267A6A" [routerLink]="'/book-now'">book now</ion-button>
-  <!-- <ion-button style="--background:#267A6A;" [routerLink]="'/view-list'">more images</ion-button> -->
+
+
+
+  
+
+  <ion-button style="--background:#267A6A;color:yellow" [routerLink]="'/book-now'">book now</ion-button>
+   <!-- <ion-button style="--background:#267A6A;" [routerLink]="'/view-list'">more images</ion-button> -->
 </ion-content>

@@ -111,9 +111,29 @@ addbookings(useruid,check_in,check_out,roomtype,adults,kids,owneruid){
         adults: adults,
         kids: kids,
         owneruid:owneruid,
+
+        status:"pending..."
         
     })
 ]);
 
 }
+//accept/decline
+bookingStatus(hotel_id,useruid,value){
+  var db =firebase.firestore(); 
+  var hotelsRef = db.collection("hotels").doc(hotel_id);
+  
+  var hotel = Promise.all([
+    hotelsRef.collection("bookings").doc(useruid)
+    .set({
+      
+       status:value,
+       useruid:useruid
+      
+    },{merge: true }).then(a=>{
+     console.log("Changed")
+    })
+]);
+}
+
 }

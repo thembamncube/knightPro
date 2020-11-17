@@ -14,7 +14,7 @@ export class BookingHistoryPage implements OnInit {
 feedback:any;
 state:any=0;
   constructor(private route:ActivatedRoute,public serviceService:ServicesService) { 
-
+   // this.status("CsJ5fGrRgacy53JMBEs4jnw21rk1", "9I4PH4AeTHkAKK38EvRf","0")
    // this.hotelService.signOut()
  
   console.log(  this.serviceService.getUseruid())
@@ -24,6 +24,7 @@ state:any=0;
     .then((querySnapshot) => { 
         querySnapshot.forEach((doc)=> {
            this.list.push(Object.assign( doc.data(),{uid:doc.id}) );
+           console.log(this.list)
          });
     })
     .catch(function(error) {
@@ -31,7 +32,12 @@ state:any=0;
     });
     
  }
-
+ status(ownerId, bookingid,status){
+   console.log(this.serviceService.getUseruid())
+  this.state=1;
+  this.serviceService.bookingStatus(ownerId,bookingid,status) 
+   
+ } 
   ngOnInit() {
   }
 

@@ -66,7 +66,11 @@ const routes: Routes = [
   {
     path: 'booking-history',
     loadChildren: () => import('./pages/booking-history/booking-history.module').then( m => m.BookingHistoryPageModule)
+  },  {
+    path: 'booking-feed-back',
+    loadChildren: () => import('./pages/booking-feed-back/booking-feed-back.module').then( m => m.BookingFeedBackPageModule)
   },
+
 
 ];
 
